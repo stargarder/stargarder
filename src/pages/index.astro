@@ -3,15 +3,121 @@
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Stargarder</title>
-	</head>
-	<body>
-		<h1>Stargarder</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Stargarder gegen Verdrängung</title>
+  </head>
+  <body>
+    <h1>DEMO</h1>
+    <h2>Stargarder gegen Verdrängung</h2>
+    <p class="location">6. März um 18:00 bei der Gethsemane-Kirche</p>
+    <h3>Media Coverage</h3>
+    <ul class="media-coverage">
+      <li>
+        <a
+          href="https://taz.de/Kellerbrand-in-der-Stargarder-Strasse/!6157145/"
+          target="_blank">TAZ.de – 27.2.2026</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://www.berliner-zeitung.de/mensch-metropole/unfaehigkeit-oder-entmietung-der-kellerbrand-in-der-stargarder-strasse-li.10019128"
+          target="_blank">Berliner Zeitung – 15.2.2026</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://www.morgenpost.de/bezirke/pankow/article411262470/bittere-botschaften-nach-brand-120-menschen-ihrer-haeuser-beraubt.html"
+          target="_blank">Morgenpost – 21.2.2026</a
+        >
+      </li>
+    </ul>
+  </body>
 </html>
+
+<style lang="scss">
+  @font-face {
+    font-family: "Stefan Bubble";
+    src: url("/ABCStefan-Bubble.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Stefan Simple";
+    src: url("/ABCStefan-Simple.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Gravity";
+    src: url("/ABCGravityVariable.woff2") format("woff2");
+  }
+  a,
+  a:visited {
+    color: inherit;
+	text-decoration: none;
+  }
+  a::before {
+	content: "→";
+	font-family: "Stefan Bubble";
+	margin-right: .5ch;
+  }
+  a::after {
+	content: "←";
+	font-family: "Stefan Bubble";
+	margin-left: .5ch;
+	text-decoration: none !important;
+  }
+  html,
+  body {
+    overscroll-behavior: none;
+  }
+  body {
+	padding-top: 50px;
+	padding-bottom: 50px;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(241 0 239);;
+    color: black;
+    & > * + * {
+      margin-top: 1em;
+    }
+  }
+  * {
+    margin: 0;
+  }
+  h1 {
+    font-family: "Gravity";
+    font-variation-settings: "wght" 1000;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    font-size: calc(50px + 5vw);
+  }
+  h2,
+  .location {
+    font-family: "Stefan Simple", cursive;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    font-size: calc(20px + 2vw);
+    white-space: pre-line;
+    text-align: center;
+    font-weight: 400;
+  }
+  h3 {
+    font-family: "Gravity", sans-serif;
+    font-variation-settings:
+      "wght" 1000,
+      "wdth" 80;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    font-size: calc(50px + 3vw);
+  }
+  .media-coverage {
+    font-family: "Gravity", sans-serif;
+    font-size: calc(16px + 1vw);
+    text-align: center;
+    list-style: none;
+  }
+</style>
